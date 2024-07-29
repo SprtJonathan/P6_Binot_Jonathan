@@ -76,17 +76,9 @@ namespace P6_Binot_Jonathan.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Probleme).IsRequired();
-                entity.HasOne(e => e.Produit)
+                entity.HasOne(e => e.ProduitSysteme)
                       .WithMany()
-                      .HasForeignKey(e => e.IdProduit)
-                      .OnDelete(DeleteBehavior.Cascade);
-                entity.HasOne(e => e.Version)
-                      .WithMany()
-                      .HasForeignKey(e => e.IdVersion)
-                      .OnDelete(DeleteBehavior.Cascade);
-                entity.HasOne(e => e.Systeme)
-                      .WithMany()
-                      .HasForeignKey(e => e.IdSysteme)
+                      .HasForeignKey(e => e.IdProduitSysteme)
                       .OnDelete(DeleteBehavior.Cascade);
                 entity.HasOne(e => e.Statut)
                       .WithMany()
@@ -201,6 +193,269 @@ namespace P6_Binot_Jonathan.Data
                 new ProduitSysteme { Id = 42, IdProduitVersion = 12, IdSysteme = 3 }, // 1.1 Windows
                 new ProduitSysteme { Id = 43, IdProduitVersion = 12, IdSysteme = 4 }, // 1.1 Android
                 new ProduitSysteme { Id = 44, IdProduitVersion = 12, IdSysteme = 5 } // 1.1 iOS
+            );
+
+            modelBuilder.Entity<Problemes>().HasData(
+                new Problemes
+                {
+                    Id = 1,
+                    IdProduitSysteme = 1, // Correspond à Trader en Herbe 1.2 sur Linux
+                    DateCreation = new DateTime(2024, 4, 8),
+                    DateResolution = new DateTime(2024, 4, 15),
+                    IdStatut = 1,
+                    Probleme = "L'application ne parvient pas à se connecter au serveur de trading en raison d'un certificat SSL non reconnu, le certificat a expiré et n’a pas été mis à jour.",
+                    Resolution = "Le certificat a été renouvelé et la date d’échéance reportée pour couvrir la date en cours."
+                },
+                new Problemes
+                {
+                    Id = 2,
+                    IdProduitSysteme = 4, // Correspond à Trader en Herbe 1.1 sur Android
+                    DateCreation = new DateTime(2024, 4, 20),
+                    DateResolution = new DateTime(2024, 4, 25),
+                    IdStatut = 1,
+                    Probleme = "Les taux de change des devises ne se mettent pas à jour en temps réel.",
+                    Resolution = "Révision de l'API de mise à jour des taux de change pour garantir la synchronisation en temps réel et ajout de fonctionnalités de mise en cache pour améliorer la performance."
+                },
+                new Problemes
+                {
+                    Id = 3,
+                    IdProduitSysteme = 14, // Correspond à Trader en Herbe 1.3 sur iOS
+                    DateCreation = new DateTime(2024, 5, 10),
+                    DateResolution = new DateTime(2024, 5, 12),
+                    IdStatut = 1,
+                    Probleme = "Les utilisateurs ne peuvent pas ajouter des actions à leur liste de favoris.",
+                    Resolution = "Correction d'un bug dans la logique d'ajout aux favoris et mise à jour de l'interface utilisateur pour une meilleure expérience utilisateur."
+                },
+                new Problemes
+                {
+                    Id = 4,
+                    IdProduitSysteme = 6, // Correspond à Trader en Herbe 1.2 sur Android
+                    DateCreation = new DateTime(2024, 11, 1),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "L'application se bloque lors de la tentative de consultation de l'historique des transactions.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 5,
+                    IdProduitSysteme = 17, // Correspond à Maître des Investissements 1.0 sur Windows
+                    DateCreation = new DateTime(2024, 5, 1),
+                    DateResolution = new DateTime(2024, 5, 6),
+                    IdStatut = 1,
+                    Probleme = "Les graphiques des performances des investissements ne s'affichent pas correctement, les données sont mal alignées.",
+                    Resolution = "Correction d'un bug dans la génération des graphiques et optimisation du rendu pour une meilleure précision des données affichées."
+                },
+                new Problemes
+                {
+                    Id = 6,
+                    IdProduitSysteme = 19, // Correspond à Maître des Investissements 2.1 sur Linux
+                    DateCreation = new DateTime(2024, 7, 15),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Problème de démarrage de l'application sur certaines distributions Linux récentes.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 7,
+                    IdProduitSysteme = 30, // Correspond à Planificateur d’Entraînement 1.1 sur Android
+                    DateCreation = new DateTime(2024, 6, 10),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Erreur de connexion à la base de données sur certains appareils Android 12.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 8,
+                    IdProduitSysteme = 37, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
+                    DateCreation = new DateTime(2024, 7, 5),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Fonctionnalité de recherche ne renvoyant pas de résultats.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 9,
+                    IdProduitSysteme = 35, // Correspond à Planificateur d’Entraînement 2.0 sur MacOS
+                    DateCreation = new DateTime(2024, 7, 12),
+                    DateResolution = new DateTime(2024, 7, 17),
+                    IdStatut = 1,
+                    Probleme = "Crash de l'application lors de l'ouverture d'un fichier volumineux.",
+                    Resolution = "Amélioration de la gestion de la mémoire pour permettre l'ouverture de fichiers volumineux."
+                },
+                new Problemes
+                {
+                    Id = 10,
+                    IdProduitSysteme = 44, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur iOS
+                    DateCreation = new DateTime(2024, 7, 20),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Problème d'affichage des caractères spéciaux dans l'interface utilisateur.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 11,
+                    IdProduitSysteme = 29, // Correspond à Planificateur d’Entraînement 1.0 sur Android
+                    DateCreation = new DateTime(2024, 8, 8),
+                    DateResolution = new DateTime(2024, 8, 12),
+                    IdStatut = 1,
+                    Probleme = "Erreur d'importation de données à partir d'un fichier CSV.",
+                    Resolution = "Correction du parser CSV pour gérer correctement les délimiteurs et les caractères spéciaux."
+                },
+                new Problemes
+                {
+                    Id = 12,
+                    IdProduitSysteme = 41, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur Linux
+                    DateCreation = new DateTime(2024, 8, 15),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Notification d'erreur non claire lors de la saisie de données invalides.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 13,
+                    IdProduitSysteme = 22, // Correspond à Maître des Investissements 2.1 sur MacOS
+                    DateCreation = new DateTime(2024, 8, 20),
+                    DateResolution = null,
+                    IdStatut = 1,
+                    Probleme = "Problème de synchronisation des données entre l'application mobile et l'application de bureau.",
+                    Resolution = "Amélioration de l'algorithme de synchronisation et correction des conflits de données."
+                },
+                new Problemes
+                {
+                    Id = 14,
+                    IdProduitSysteme = 15, // Correspond à Trader en Herbe 1.3 sur iOS
+                    DateCreation = new DateTime(2024, 8, 25),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Bug d'affichage des graphiques sur la version iOS 14.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 15,
+                    IdProduitSysteme = 31, // Correspond à Planificateur d’Entraînement 1.1 sur Windows
+                    DateCreation = new DateTime(2024, 9, 1),
+                    DateResolution = new DateTime(2024, 9, 5),
+                    IdStatut = 1,
+                    Probleme = "Les rappels de séance d'entraînement ne fonctionnent pas de manière cohérente.",
+                    Resolution = "Correction du module de rappels et ajout de tests pour vérifier leur fiabilité."
+                },
+                new Problemes
+                {
+                    Id = 16,
+                    IdProduitSysteme = 40, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Android
+                    DateCreation = new DateTime(2024, 9, 5),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Problèmes de performances lors du chargement des statistiques d'anxiété.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 17,
+                    IdProduitSysteme = 21, // Correspond à Maître des Investissements 1.0 sur Linux
+                    DateCreation = new DateTime(2024, 9, 10),
+                    DateResolution = new DateTime(2024, 9, 15),
+                    IdStatut = 1,
+                    Probleme = "Erreur lors de la génération des rapports hebdomadaires.",
+                    Resolution = "Correction de la logique de génération de rapports et mise à jour des dépendances."
+                },
+                new Problemes
+                {
+                    Id = 18,
+                    IdProduitSysteme = 36, // Correspond à Planificateur d’Entraînement 2.0 sur iOS
+                    DateCreation = new DateTime(2024, 9, 15),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Synchronisation défectueuse avec l'application Apple Health.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 19,
+                    IdProduitSysteme = 44, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur MacOS
+                    DateCreation = new DateTime(2024, 9, 20),
+                    DateResolution = new DateTime(2024, 9, 25),
+                    IdStatut = 1,
+                    Probleme = "Les utilisateurs ne reçoivent pas les notifications de suivi des activités.",
+                    Resolution = "Mise à jour du module de notifications et ajout de tests pour vérifier leur bon fonctionnement."
+                },
+                new Problemes
+                {
+                    Id = 20,
+                    IdProduitSysteme = 23, // Correspond à Maître des Investissements 2.1 sur Windows
+                    DateCreation = new DateTime(2024, 9, 25),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "La fonction de calcul des rendements annuels ne donne pas les résultats attendus.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 21,
+                    IdProduitSysteme = 34, // Correspond à Planificateur d’Entraînement 2.0 sur Windows
+                    DateCreation = new DateTime(2024, 10, 30),
+                    DateResolution = new DateTime(2024, 11, 5),
+                    IdStatut = 1,
+                    Probleme = "Les utilisateurs ne peuvent pas ajouter des séances d'entraînement personnalisées.",
+                    Resolution = "Correction de la logique de sauvegarde des séances personnalisées et mise à jour de l'interface utilisateur pour améliorer l'expérience."
+                },
+                new Problemes
+                {
+                    Id = 22,
+                    IdProduitSysteme = 37, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
+                    DateCreation = new DateTime(2024, 10, 5),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Crash de l'application lors de la tentative d'ajout d'une nouvelle activité.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 23,
+                    IdProduitSysteme = 23, // Correspond à Maître des Investissements 2.0 sur Android
+                    DateCreation = new DateTime(2024, 10, 10),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "L'application ne se met pas à jour automatiquement malgré l'activation de l'option.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 24,
+                    IdProduitSysteme = 24, // Correspond à Maître des Investissements 2.1 sur iOS
+                    DateCreation = new DateTime(2024, 10, 25),
+                    DateResolution = null,
+                    IdStatut = 2,
+                    Probleme = "Les rapports financiers exportés en PDF sont corrompus et illisibles.",
+                    Resolution = null
+                },
+                new Problemes
+                {
+                    Id = 25,
+                    IdProduitSysteme = 44, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur Windows
+                    DateCreation = new DateTime(2024, 10, 20),
+                    DateResolution = new DateTime(2024, 10, 25),
+                    IdStatut = 1,
+                    Probleme = "Les utilisateurs rencontrent des délais importants lors de la mise à jour des activités.",
+                    Resolution = "Optimisation du code de mise à jour pour améliorer les performances et réduire les délais."
+                },
+                new Problemes
+                {
+                    Id = 26,
+                    IdProduitSysteme = 27, // Correspond à Planificateur d’Entraînement 2.0 sur Linux
+                    DateCreation = new DateTime(2024, 11, 2),
+                    DateResolution = new DateTime(2024, 11, 6),
+                    IdStatut = 1,
+                    Probleme = "L'application ne sauvegarde pas les séances d'entraînement correctement sur certaines distributions Linux.",
+                    Resolution = "Correction de la logique de gestion des fichiers de sauvegarde et ajout de tests de compatibilité pour différentes distributions Linux."
+                }
             );
         }
     }
