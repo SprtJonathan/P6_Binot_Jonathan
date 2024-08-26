@@ -319,9 +319,9 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 13,
-                    IdProduitSysteme = 22, // Correspond à Maître des Investissements 2.1 sur MacOS
+                    IdProduitSysteme = 21, // Correspond à Maître des Investissements 2.1 sur MacOS
                     DateCreation = new DateTime(2024, 8, 20),
-                    DateResolution = null,
+                    DateResolution = new DateTime(2024, 8, 25),
                     IdStatut = 1,
                     Probleme = "Problème de synchronisation des données entre l'application mobile et l'application de bureau.",
                     Resolution = "Amélioration de l'algorithme de synchronisation et correction des conflits de données."
@@ -389,7 +389,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 20,
-                    IdProduitSysteme = 23, // Correspond à Maître des Investissements 2.1 sur Windows
+                    IdProduitSysteme = 22, // Correspond à Maître des Investissements 2.1 sur Windows
                     DateCreation = new DateTime(2024, 9, 25),
                     DateResolution = null,
                     IdStatut = 2,
