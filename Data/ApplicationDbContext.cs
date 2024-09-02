@@ -204,7 +204,7 @@ namespace P6_Binot_Jonathan.Data
                     DateResolution = new DateTime(2024, 4, 15),
                     IdStatut = 1,
                     Probleme = "L'application ne parvient pas à se connecter au serveur de trading en raison d'un certificat SSL non reconnu, le certificat a expiré et n’a pas été mis à jour.",
-                    Resolution = "Le certificat a été renouvelé et la date d’échéance reportée pour couvrir la date en cours."
+                    Resolution = "Le certificat a été renouvelé et la date d’échéance reportée pour couvrir la date en cours. Afin d'éviter que ce problème ne se reproduise, prévoir une maintenance périodique pour mettre à jour le certificat SSL."
                 },
                 new Problemes
                 {
