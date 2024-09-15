@@ -199,7 +199,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 1,
-                    IdProduitSysteme = 1, // Correspond à Trader en Herbe 1.2 sur Linux
+                    IdProduitSysteme = 6, // Correspond à Trader en Herbe 1.2 sur Linux
                     DateCreation = new DateTime(2024, 4, 8),
                     DateResolution = new DateTime(2024, 4, 15),
                     IdStatut = 1,
@@ -209,7 +209,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 2,
-                    IdProduitSysteme = 4, // Correspond à Trader en Herbe 1.1 sur Android
+                    IdProduitSysteme = 5, // Correspond à Trader en Herbe 1.1 sur Windows
                     DateCreation = new DateTime(2024, 4, 20),
                     DateResolution = new DateTime(2024, 4, 25),
                     IdStatut = 1,
@@ -219,7 +219,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 3,
-                    IdProduitSysteme = 14, // Correspond à Trader en Herbe 1.3 sur iOS
+                    IdProduitSysteme = 15, // Correspond à Trader en Herbe 1.3 sur iOS
                     DateCreation = new DateTime(2024, 5, 10),
                     DateResolution = new DateTime(2024, 5, 12),
                     IdStatut = 1,
@@ -229,7 +229,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 4,
-                    IdProduitSysteme = 6, // Correspond à Trader en Herbe 1.2 sur Android
+                    IdProduitSysteme = 9, // Correspond à Trader en Herbe 1.2 sur Android
                     DateCreation = new DateTime(2024, 11, 1),
                     DateResolution = null,
                     IdStatut = 2,
@@ -239,7 +239,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 5,
-                    IdProduitSysteme = 17, // Correspond à Maître des Investissements 1.0 sur Windows
+                    IdProduitSysteme = 17, // Correspond à Maître des Investissements 1.0 sur iOS
                     DateCreation = new DateTime(2024, 5, 1),
                     DateResolution = new DateTime(2024, 5, 6),
                     IdStatut = 1,
@@ -249,11 +249,11 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 6,
-                    IdProduitSysteme = 19, // Correspond à Maître des Investissements 2.1 sur Linux
+                    IdProduitSysteme = 21, // Correspond à Maître des Investissements 2.1 sur MacOS
                     DateCreation = new DateTime(2024, 7, 15),
                     DateResolution = null,
                     IdStatut = 2,
-                    Probleme = "Problème de démarrage de l'application sur certaines distributions Linux récentes.",
+                    Probleme = "Problème de démarrage de l'application sur la dernière version de MacOS.",
                     Resolution = null
                 },
                 new Problemes
@@ -269,7 +269,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 8,
-                    IdProduitSysteme = 37, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
+                    IdProduitSysteme = 38, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
                     DateCreation = new DateTime(2024, 7, 5),
                     DateResolution = null,
                     IdStatut = 2,
@@ -279,7 +279,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 9,
-                    IdProduitSysteme = 35, // Correspond à Planificateur d’Entraînement 2.0 sur MacOS
+                    IdProduitSysteme = 33, // Correspond à Planificateur d’Entraînement 2.0 sur MacOS
                     DateCreation = new DateTime(2024, 7, 12),
                     DateResolution = new DateTime(2024, 7, 17),
                     IdStatut = 1,
@@ -299,7 +299,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 11,
-                    IdProduitSysteme = 29, // Correspond à Planificateur d’Entraînement 1.0 sur Android
+                    IdProduitSysteme = 29, // Correspond à Planificateur d’Entraînement 1.1 sur Windows
                     DateCreation = new DateTime(2024, 8, 8),
                     DateResolution = new DateTime(2024, 8, 12),
                     IdStatut = 1,
@@ -309,7 +309,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 12,
-                    IdProduitSysteme = 41, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur Linux
+                    IdProduitSysteme = 41, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur MacOS
                     DateCreation = new DateTime(2024, 8, 15),
                     DateResolution = null,
                     IdStatut = 2,
@@ -339,7 +339,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 15,
-                    IdProduitSysteme = 31, // Correspond à Planificateur d’Entraînement 1.1 sur Windows
+                    IdProduitSysteme = 31, // Correspond à Planificateur d’Entraînement 1.1 sur iOS
                     DateCreation = new DateTime(2024, 9, 1),
                     DateResolution = new DateTime(2024, 9, 5),
                     IdStatut = 1,
@@ -349,7 +349,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 16,
-                    IdProduitSysteme = 40, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Android
+                    IdProduitSysteme = 39, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Android
                     DateCreation = new DateTime(2024, 9, 5),
                     DateResolution = null,
                     IdStatut = 2,
@@ -359,7 +359,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 17,
-                    IdProduitSysteme = 21, // Correspond à Maître des Investissements 1.0 sur Linux
+                    IdProduitSysteme = 21, // Correspond à Maître des Investissements 2.1 sur MacOS
                     DateCreation = new DateTime(2024, 9, 10),
                     DateResolution = new DateTime(2024, 9, 15),
                     IdStatut = 1,
@@ -379,7 +379,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 19,
-                    IdProduitSysteme = 44, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur MacOS
+                    IdProduitSysteme = 41, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur MacOS
                     DateCreation = new DateTime(2024, 9, 20),
                     DateResolution = new DateTime(2024, 9, 25),
                     IdStatut = 1,
@@ -409,7 +409,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 22,
-                    IdProduitSysteme = 37, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
+                    IdProduitSysteme = 38, // Correspond à Planificateur d’Anxiété Sociale 1.0 sur Windows
                     DateCreation = new DateTime(2024, 10, 5),
                     DateResolution = null,
                     IdStatut = 2,
@@ -419,7 +419,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 23,
-                    IdProduitSysteme = 23, // Correspond à Maître des Investissements 2.0 sur Android
+                    IdProduitSysteme = 19, // Correspond à Maître des Investissements 2.0 sur Android
                     DateCreation = new DateTime(2024, 10, 10),
                     DateResolution = null,
                     IdStatut = 2,
@@ -439,7 +439,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 25,
-                    IdProduitSysteme = 44, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur Windows
+                    IdProduitSysteme = 42, // Correspond à Planificateur d’Anxiété Sociale 1.1 sur Windows
                     DateCreation = new DateTime(2024, 10, 20),
                     DateResolution = new DateTime(2024, 10, 25),
                     IdStatut = 1,
@@ -449,7 +449,7 @@ namespace P6_Binot_Jonathan.Data
                 new Problemes
                 {
                     Id = 26,
-                    IdProduitSysteme = 27, // Correspond à Planificateur d’Entraînement 2.0 sur Linux
+                    IdProduitSysteme = 27, // Correspond à Planificateur d’Entraînement 1.1 sur Linux
                     DateCreation = new DateTime(2024, 11, 2),
                     DateResolution = new DateTime(2024, 11, 6),
                     IdStatut = 1,
